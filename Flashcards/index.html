@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Умные Карточки</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Умные Карточки</h1>
+
+      <div class="deck-selector"></div>
+
+      <div class="card-form">
+        <div class="input-group">
+          <label>Вопрос / Термин</label>
+          <input
+            type="text"
+            id="card-front"
+            placeholder="Например: Столица Франции"
+          />
+        </div>
+        <div class="input-group">
+          <label>Ответ / Определение</label>
+          <input type="text" id="card-back" placeholder="Париж" />
+        </div>
+        <div class="actions-form">
+          <button id="add-btn" class="btn-primary">Создать карточку</button>
+          <button
+            id="cancel-edit-btn"
+            class="btn-secondary"
+            style="display: none"
+          >
+            Отмена
+          </button>
+        </div>
+      </div>
+
+      <div class="table-header">
+        <h2>Колода</h2>
+        <button id="shuffle-btn" class="btn-secondary">
+          Перемешать колоду
+        </button>
+      </div>
+
+      <table id="cards-table">
+        <thead>
+          <tr>
+            <th>Лицевая сторона</th>
+            <th>Оборотная сторона</th>
+            <th>Статус</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+
+      <div class="study-section">
+        <div class="study-header">
+          <h3>Режим изучения</h3>
+          <div class="study-controls">
+            <label class="checkbox-label">
+              <input type="checkbox" id="only-unlearned" checked />
+              Только невыученные
+            </label>
+            <button id="study-shuffle-btn" class="btn-secondary">
+              Перемешать
+            </button>
+          </div>
+        </div>
+
+        <div id="current-card-display" class="card-display">
+          Нажми, чтобы начать
+        </div>
+        <div class="position" id="card-position">0 / 0</div>
+
+        <div class="controls">
+          <button id="prev-btn" class="nav-btn btn-secondary">Назад</button>
+          <button id="flip-btn" class="nav-btn btn-primary">Перевернуть</button>
+          <button id="next-btn" class="nav-btn btn-secondary">Вперед</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

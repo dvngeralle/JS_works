@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="title">Simon Says</h1>
+        <div class="best-score">
+          Best: <span id="best-score">0</span>
+        </div>
+      </header>
+
+      <div class="status-bar">
+        <p id="status-text">Press Start to play</p>
+      </div>
+
+      <div class="grid" id="grid">
+        <button class="card" id="card-0" data-index="0"></button>
+        <button class="card" id="card-1" data-index="1"></button>
+        <button class="card" id="card-2" data-index="2"></button>
+        <button class="card" id="card-3" data-index="3"></button>
+      </div>
+
+      <div class="controls">
+        <div class="score-display">
+          Round: <span id="round-display">—</span>
+        </div>
+        <button class="btn-start" id="start-btn">Start</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

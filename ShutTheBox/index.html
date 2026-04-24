@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Игра "Закрой числа"</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-around;
+        font-family: sans-serif;
+      }
+      .player {
+        border: 2px solid #333;
+        padding: 20px;
+        width: 40%;
+        text-align: center;
+      }
+      .active {
+        background-color: #00ff15;
+        border-color: #000000;
+      }
+      .closed {
+        color: red;
+        text-decoration: line-through;
+      }
+      span {
+        font-size: 22px;
+        margin: 5px;
+        transition: 0.3s;
+      }
+      button {
+        padding: 10px;
+        margin: 5px;
+      }
+      #roll-btn {
+        font-weight: bold;
+        padding: 15px 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-bottom: 5px">Игра "Закрой числа"</h1>
+
+    <div
+      style="
+        max-width: 700px;
+        margin: 0 auto 30px;
+        text-align: center;
+        color: #555;
+        font-family: sans-serif;
+        line-height: 1.5;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+      "
+    >
+      <strong>Правила:</strong> Каждый игрок бросает по очереди 2 кубика.
+      Выпавшие 2 числа он может либо закрыть по отдельности, либо закрыть их
+      сумму. Победит тот, кто первый закроет все числа.
+    </div>
+
+    <div class="container">
+      <div id="p1-box" class="player active">
+        <h3>Игрок 1</h3>
+        <div id="cards1"></div>
+        <div id="actions1"></div>
+      </div>
+
+      <div id="p2-box" class="player">
+        <h3>Игрок 2</h3>
+        <div id="cards2"></div>
+        <div id="actions2"></div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px">
+      <p id="dice-res">Нажмите "Бросить кубики", чтобы начать</p>
+      <button id="roll-btn">Бросить кубики</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
